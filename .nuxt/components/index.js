@@ -1,5 +1,9 @@
-export { default as NuxtLogo } from '../..\\components\\NuxtLogo.vue'
-export { default as Tutorial } from '../..\\components\\Tutorial.vue'
+export { default as BaseAbout } from '../..\\components\\BaseAbout.vue'
+export { default as BaseAction } from '../..\\components\\BaseAction.vue'
+export { default as BaseFooter } from '../..\\components\\BaseFooter.vue'
+export { default as BaseHeader } from '../..\\components\\BaseHeader.vue'
+export { default as BaseHero } from '../..\\components\\BaseHero.vue'
+export { default as BaseServices } from '../..\\components\\BaseServices.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {

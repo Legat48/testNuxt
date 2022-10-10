@@ -1,0 +1,20 @@
+.knob {
+    position: relative;
+    border-color: transparent;
+    outline: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--color-text-btn);
+    background-color: var(--color-bg-btn);
+    cursor: pointer;
+    &_alt {
+        color: var(--color-text-btn-alt);
+        background-color: var(--color-bg-btn-alt);
+    }
+    &_alt-2 {
+        border-radius: var(--radius-btn-alt-2);
+        color: var(--color-text-btn-alt-2);
+        background-color: var(--color-bg-btn-alt-2);
+    }
+}

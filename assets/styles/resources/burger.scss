@@ -1,0 +1,85 @@
+
+// burger
+.burger {
+  position: relative;
+  z-index: 101;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.burger__body {
+  --burger-width: 18px;
+  --burger-height: 14px;
+  --burger-line-height: 2px;
+  position: relative;
+  border: none;
+  padding: 0;
+  width: var(--burger-width);
+  height: var(--burger-height);
+  color: var(--color-text);
+  background-color: transparent;
+}
+.burger__body::before, .burger__body::after {
+  content: "";
+  z-index: 3;
+  position: absolute;
+  left: 0;
+  border-radius: var(--burger-line-height);
+  width: 100%;
+  height: var(--burger-line-height);
+  background-color: currentColor;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+.burger__body::before {
+  top: 0;
+}
+.burger__body::after {
+  top: calc(100% - var(--burger-line-height));
+}
+.burger__body span {
+  width: 100%;
+}
+.burger__body::after {
+  width: 100%;
+}
+.burger__line {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  border-radius: var(--burger-line-height);
+  width: 100%;
+  height: var(--burger-line-height);
+  background-color: currentColor;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out, width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+// .burger--active {
+//   // transform: scale(0.7) translateX(-6px);
+// }
+.burger--active .burger__body::before {
+  top: 50%;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+.burger--active .burger__body::after {
+  top: 50%;
+  width: 100%;
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+// .burger--active .burger__line {
+//   transform: scale(0);
+//   transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+// }
+
+.burger__body:focus::after {
+  opacity: 1;
+}
+
+.burger--active .burger__line {
+ opacity: 0;
+}

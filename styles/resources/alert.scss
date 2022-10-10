@@ -1,0 +1,16 @@
+
+.alert {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  @include flexCenter;
+  margin: 0 auto;
+  width: 50%;
+  min-height: 70px;
+  border: 3px solid var(--color-border);
+  border-radius: var(--radius-big-btn);
+  color: var(--color-text);
+  background-color: var(--color-background);
+}

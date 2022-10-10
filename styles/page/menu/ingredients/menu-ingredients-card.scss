@@ -1,0 +1,111 @@
+.menu-ingredients-card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    padding: 10px 10px 15px;
+    border-left: 2px solid var(--color-border-alt-3);
+    border-radius: var(--radius-card-mid);
+    background-color: var(--color-bg-card-alt);
+    @media (min-width: 768px) {
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 0;
+        padding: 5px;
+        border-radius: 0px;
+        border: none;
+        min-height: 35px;
+        background-color: var(--color-bg-card);
+        &:nth-child(2n) {
+            background-color: transparent;
+        }
+        &:not(:last-child) {
+            border-bottom: 1px solid var(--color-border-alt);
+        }
+    }
+    &__box-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        width: 100%;
+        @media (min-width: 768px) {
+            position: absolute;
+            top: 9px;
+            right: 5px;
+            margin: 0;
+            width: 18px;
+            height: 18px;
+            border: none;
+        }
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: var(--color-text);
+        @media (min-width: 768px) {
+           display: none;
+        }
+    }
+    &__edit {
+        background-color: transparent;
+        @media (min-width: 768px) {
+            width: 15px;
+            height: 15px;
+            border: none;
+        }
+        path {
+            stroke: var(--color-svg-alt);
+        }
+    }
+    &__box-bot {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 14px;
+        row-gap: 40px;
+        width: 100%;
+        @media (min-width: 768px) {
+            padding: 10px;
+            row-gap: 00px;
+
+            flex-wrap: nowrap;
+        }
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        &_nomob {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            width: 20%;
+            &_nomob {
+                display: flex;
+            }
+        }
+    }
+    &__item-title {
+        margin-bottom: 6px;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 14px;
+        color: var(--color-text-btn-noactive);
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+    &__item-value {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: var(--color-text);
+        &_plus {
+            color: var(--color-text-plus);
+        }
+        &_minus {
+            color: var(--color-text-minus);
+        }
+    }
+}

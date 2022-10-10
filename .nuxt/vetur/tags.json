@@ -1,8 +1,20 @@
 {
-  "NuxtLogo": {
-    "description": "Auto imported from components/NuxtLogo.vue"
+  "BaseAbout": {
+    "description": "Auto imported from components/BaseAbout.vue"
   },
-  "Tutorial": {
-    "description": "Auto imported from components/Tutorial.vue"
+  "BaseAction": {
+    "description": "Auto imported from components/BaseAction.vue"
+  },
+  "BaseFooter": {
+    "description": "Auto imported from components/BaseFooter.vue"
+  },
+  "BaseHeader": {
+    "description": "Auto imported from components/BaseHeader.vue"
+  },
+  "BaseHero": {
+    "description": "Auto imported from components/BaseHero.vue"
+  },
+  "BaseServices": {
+    "description": "Auto imported from components/BaseServices.vue"
   }
 }

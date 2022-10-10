@@ -8,6 +8,5 @@
 <script>
 export default {
   middleware: ['checkAuth']
-
 }
 </script>

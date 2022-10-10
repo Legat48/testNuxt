@@ -1,33 +1,16 @@
 [
   {
-    "path": "/users",
-    "component": "D:\\\\nuxt\\\\testNuxt1\\\\pages\\\\users.vue",
-    "chunkName": "pages/users",
-    "children": [
-      {
-        "name": "users",
-        "path": "",
-        "component": "D:\\\\nuxt\\\\testNuxt1\\\\pages\\\\users\\\\index.vue",
-        "chunkName": "pages/users/index"
-      },
-      {
-        "name": "users-create",
-        "path": "create",
-        "component": "D:\\\\nuxt\\\\testNuxt1\\\\pages\\\\users\\\\create.vue",
-        "chunkName": "pages/users/create"
-      },
-      {
-        "name": "users-id",
-        "path": ":id",
-        "component": "D:\\\\nuxt\\\\testNuxt1\\\\pages\\\\users\\\\_id.vue",
-        "chunkName": "pages/users/_id"
-      }
-    ]
+    "name": "admin",
+    "path": "/admin",
+    "component": "D:\\\\testNuxt\\\\pages\\\\admin.vue",
+    "chunkName": "pages/admin",
+    "_name": "_23a00ff8"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "D:\\\\nuxt\\\\testNuxt1\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "component": "D:\\\\testNuxt\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_867eb7f2"
   }
 ]

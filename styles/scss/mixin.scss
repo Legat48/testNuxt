@@ -1,0 +1,45 @@
+@mixin transition {
+  transition-property: border, outline, color, background-color, transform, fill, stroke, opacity, filter;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+@mixin  backgroundCenter {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin  flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin fontInput {
+  font-family: var(--font-family-input);
+  font-weight: var(--font-weight-input);
+  font-size: var(--font-size-input);
+  line-height: var(--line-height-input);
+}
+
+@mixin fontTags {
+  font-family: var(--font-family-tags);
+  font-weight: var(--font-weight-tags);
+  font-size: var(--font-size-tags);
+  line-height: var(--line-height-tags);
+}
+@mixin fontSubTitle {
+  font-family: var(--font-family-subtitle);
+  font-weight: var(--font-weight-subtitle);
+  font-size: var(--font-size-subtitle);
+  line-height: var(--line-height-subtitle);
+}
+@mixin radiusButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 50%;
+}
+

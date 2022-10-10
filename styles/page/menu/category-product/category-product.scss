@@ -1,0 +1,82 @@
+.category-product {
+    margin-top: 20px;
+    padding: 15px 10px 0 5px;
+    border-radius: var(--radius-card-big);
+    background-color: var(--color-bg-card);
+    &__box-btn {
+    }
+    &__btn-add {
+        margin-left: auto;
+    }
+    &__wrap-card {
+    }
+    &__card {
+        padding-left: 25px;
+        margin-bottom: 10px;
+        width: 100%;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+    &__btn,
+    &__btn:focus,
+    &__btn:active,
+    &__btn:hover {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 8px 13px 8px 10px;
+        border-radius: var(--radius-btn);
+        border-color: transparent;
+        width: 100%;
+        color: var(--color-text);
+        background-color: var(--color-bg-card-alt);
+        box-shadow: none !important;
+    }
+    &__btn.not-collapsed {
+        .category-product__icon-plus {
+            opacity: 0;
+        }
+    }
+    &__btn-img {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+        margin-right: 10px;
+        border-radius: 100%;
+        width: 28px;
+        height: 28px;
+    }
+    &__btn-trait {
+        margin-right: 10px;
+        width: 1px;
+        height: 29px;
+        background-color: var( --color-border-alt-2);
+    }
+    &__icon {
+        position: absolute;
+        top: 30%;
+        left: -26px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 16px;
+        height: 16px;
+        &-plus {
+            @include transition;
+        }
+    }
+    &__btn-text {
+        margin-right: auto;
+    }
+    &__edit {
+        background-color: transparent;
+    }
+    &__collapse-content,
+    &__content-box {
+        border: none;
+        border-radius: none;
+        background-color: transparent;
+    }
+}

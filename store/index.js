@@ -1,5 +1,5 @@
 export const actions = {
   nuxtServerInit () {
-    console.log('nuxtServerInit')
+    // console.log('nuxtServerInit')
   }
 }

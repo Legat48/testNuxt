@@ -1,0 +1,32 @@
+@import 'scss/fonts';
+@import 'scss/common';
+@import 'scss/mixin.scss';
+@import 'scss/root';
+@import 'scss/fixbr';
+@import 'scss/knob';
+@import 'scss/app';
+
+@import 'resources/browser-scroll.scss';
+@import 'resources/alert.scss';
+@import 'resources/burger.scss';
+@import 'resources/pagination.scss';
+
+@import 'componentscss/content.scss';
+
+@import 'page/login.scss';
+@import 'page/menu/ingredients/menu-ingredients-card.scss';
+@import 'page/menu/ingredients/menu-ingredients.scss';
+@import 'page/menu/category-product/category-product.scss';
+@import 'page/menu/terminal/menu-terminal.scss';
+@import 'page/menu/product/menu-product.scss';
+@import 'page/menu/print-price/print-price.scss';
+@import 'page/menu/job-list/job-list.scss';
+@import 'componentscss/header.scss';
+@import 'componentscss/nav.scss';
+@import 'componentscss/custom-tooltip.scss';
+@import 'componentscss/choises.scss';
+@import 'componentscss/search-input.scss';
+@import 'componentscss/form.scss';
+@import 'componentscss/edit.scss';
+@import 'componentscss/card.scss';
+
