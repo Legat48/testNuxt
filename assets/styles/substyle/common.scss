@@ -13,11 +13,11 @@ img,svg {
 }
 
 html {
-  background-color: var(--color-bg);
+  font-size: 24px;
+  line-height: 32px;
 }
 html body {
-  background-color: red;
-  font-family: 'SFProDisplay', sans-serif ;
+  font-family: 'Manrope', sans-serif ;
   margin: 0 auto;
 }
 
@@ -32,67 +32,11 @@ a:hover {
 
 body {
   position: relative;
-  min-width: 360px;
+}
+
+.container {
   max-width: 1920px;
-  min-height: 90vh;
-  font-size: 14px;
-  color: var(--color-text);
-  background-color: var(--color-bg);
-  @media (min-width: 430px) {
-  }
-  @media (min-width: 980px) {
-  }
-  @media (min-width: 1359px) {
-  }
-  .simplebar-scrollbar:before {
-    background-color: var(--color-btn-background-alternate);
-  }
+  padding: 0 96px 0 108px;
 }
 
 
-
-input[type="number"] {
-	-moz-appearance: textfield;
-	-webkit-appearance: textfield;
-	appearance: textfield;
-}
-
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-	display: none;
-}
-
-
-.is-choise {
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    top: 0;
-    right: 0;
-    border-bottom: 1px solid var(--color-border-alt-3);
-    transition: opacity 0.4s ease;
-    opacity: 0;
-    pointer-events: none;
-    background: linear-gradient(
-      360deg,
-      rgba(255, 202, 5, 0.51) -118.97%,
-      rgba(255, 202, 5, 0) 46.55%
-    );
-    color: transparent;
-  }
-  &:hover,
-  &:active,
-  &:focus-visible {
-    &::after {
-      opacity: 1;
-    }
-  }
-  &.is-choise--choisen {
-    &::after {
-      opacity: 1;
-    }
-  }
-}
