@@ -14,7 +14,6 @@
 <script>
 export default {
   asyncData ({ store }) {
-    // store.dispatch('services/getServices')
     const services = store.getters['services/getServices']
     return { services }
   }

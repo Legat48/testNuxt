@@ -1,7 +1,6 @@
-export default function ({ store, redirect }) {
-  const auth = store.getters['auth/isAuthenticated']
-  console.log('test')
-  if (!auth) {
-    redirect('/')
+export default function ({ redirect, app }) {
+  const cookieRes = app.$cookies.get('login')
+  if (!cookieRes) {
+    redirect('/admin/login')
   }
 }

@@ -83,12 +83,15 @@ export default {
       } else {
         this.passType = 'password'
       }
+    },
+    authorization () {
+      if (this.login === this.corrLogin && this.pass === this.corrPass) {
+        this.$cookies.set('login', 'true', {
+          path: '/'
+        })
+        this.$router.push({ path: '/admin' })
+      }
     }
-    // authorization () {
-    //   if (this.login === this.corrLogin && this.pass === this.corrPass) {
-
-    //   }
-    // }
   }
 }
 </script>
