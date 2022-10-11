@@ -1,0 +1,63 @@
+.action {
+  &__box {
+
+  }
+  &__card {
+    margin: 0 auto;
+    border-radius: 16px;
+    width: calc(1484/1716 * 100%);
+    background-image: url('@/assets/img/action-img-1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    overflow: hidden;
+  }
+  &__card-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    padding: 151px 93px 151px calc(335/1077 * 100%)  ;
+    width: calc(1077/1468 * 100%);
+    min-height: 603px;
+    color: var(--color-text-1);
+    background: linear-gradient(0deg, rgba(74, 88, 209, 0.2), rgba(74, 88, 209, 0.2)), radial-gradient(39.98% 91.71% at 77.26% 50%, #9747FF 0%, #EE00F3 100%);
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  &__title {margin-bottom: 8px;
+    font-family: 'NeueMachina', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    line-height: 2.3rem;
+  }
+  &__text {
+    margin-bottom: 46px;
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  &__btn {
+    margin-right: auto;
+  }
+  &__wrap-btn-nav {
+    position: absolute;
+    right: 46px;
+    bottom: 49px;
+    display: flex;
+    gap: 30px;
+  }
+  &__btn-nav {
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-image: url('@/assets/svg/action-arrow.svg');
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: center;
+    &_left {
+      transform: rotate(180deg);
+    }
+  }
+}

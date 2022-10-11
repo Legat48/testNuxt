@@ -1,0 +1,68 @@
+.hero {
+  min-height: 893px;
+  color: var(--color-text-1);
+  @include backgroundCenter;
+  background-image: url('@/assets/img/hero-bg@x1.png');
+  @media (min-resolution: 2dppx) {
+    background-image: url("@/assets/img/hero-bg@x2.png");
+  }
+  &__box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 190px;
+    &::after {
+      content: ' ';
+      position: absolute;
+      top: 217px;
+      left: calc(734/1920 * 100%);
+      width: 485px;
+      height: 485px;
+      @include backgroundCenter;
+      background-image: url('@/assets/img/hero-img@x1.png');
+      @media (min-resolution: 2dppx) {
+        background-image: url("@/assets/img/hero-img@x2.png");
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 68px;
+    max-width: 583px;
+    font-family: 'NeueMachina', sans-serif;
+    font-weight: 800;
+    font-size: 4.3rem;
+    line-height: 3.125rem;
+  }
+  &__btn {
+    margin-right: auto;
+  }
+  &__list {
+    position: absolute;
+    top: 190px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    min-width: 414px;
+  }
+  &__item {
+    padding: 32px;
+    border-radius: 5px;
+    width: 100%;
+    min-height: 135px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  &__item-title {
+    margin-bottom: 10px;
+    font-family: 'NeueMachina', sans-serif;
+    font-weight: 800;
+    font-size: 1.67rem;
+    line-height: 1.67rem;
+  }
+  &__item-text {
+    font-weight: 500;
+    font-size: 0.67rem;
+    line-height: 0.69rem;
+  }
+
+}
