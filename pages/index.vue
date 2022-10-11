@@ -1,10 +1,12 @@
 <template>
   <div class="app">
     <BaseHeader />
-    <BaseHero />
-    <BaseServices />
-    <BaseAction />
-    <BaseAbout />
+    <main>
+      <BaseHero />
+      <BaseServices />
+      <BaseAction />
+      <BaseAbout />
+    </main>
     <BaseFooter />
   </div>
 </template>
@@ -13,7 +15,3 @@
 export default {
 }
 </script>
-
-<!-- <style lang="scss">
-@import '../assets/scss/styles.scss';
-</style> -->

@@ -1,12 +1,101 @@
 <template>
   <main>
-    <h1>Обертка для страниц  users</h1>
-    <nuxt-child />
+    <div class="login">
+      <form class="login__form" action="#" @submit.prevent="authorization()">
+        <div class="login__logo" />
+        <label class="login__label" for="input-login">
+          <input
+            id="input-login"
+            v-model="login"
+            class="login__input login-input"
+            type="text"
+            placeholder="Логин"
+            name="login"
+          >
+        </label>
+        <label class="login__label" for="input-password">
+          <input
+            id="input-password"
+            v-model="pass"
+            class="login__input"
+            :type="passType"
+            placeholder="Пароль"
+            name="password"
+          >
+          <button class="login__show knob" @click.prevent="hidingPass()">
+            <svg
+              v-if="!showPass"
+              class="login__view"
+              viewbox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M.2 10a11 11 0 0 1 19.6 0A11 11 0 0 1 .2 10zm9.8 4a4 4 0 1 0 0
+            -8 4 4 0 0 0 0 8zm0-2a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+              />
+            </svg>
+            <svg
+              v-if="showPass"
+              class="login__view"
+              viewbox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.81 4.36l-1.77 1.78a4 4 0 0 0-4.9 4.9l-2.76 2.75C2.06 12.79.96
+              11.49.2 10a11 11 0 0 1
+            12.6-5.64zm3.8 1.85c1.33 1 2.43 2.3 3.2 3.79a11 11 0 0 1-12.62 5.64l1.77-1.
+            78a4 4 0 0 0 4.9-4.9l2.76-2.75zm-.25-3
+            .99l1.42 1.42L3.64 17.78l-1.42-1.42L16.36 2.22z"
+              />
+            </svg>
+          </button>
+        </label>
+        <button class="login__knob knob knob_alt-2" type="submit">
+          Войти
+        </button>
+      </form>
+    </div>
   </main>
 </template>
 
 <script>
 export default {
-  middleware: ['checkAuth']
+  middleware: ['checkAuth'],
+  data () {
+    return {
+      login: 'admin',
+      pass: '1234',
+      passType: 'password',
+      showPass: false,
+      publicPath: process.env.BASE_URL
+    }
+  },
+  methods: {
+    hidingPass () {
+      if (this.passType === 'password') {
+        this.passType = 'text'
+      } else {
+        this.passType = 'password'
+      }
+    },
+    async authorization () {
+      try {
+        const res = await this.$axios.post('http://cwmain.crmka.xyz/auth', {
+          login: this.login,
+          password: this.pass,
+          api_key: 'e9daa2e6-510c-47e6-8537-142293e9a9f9'
+        })
+        const { data } = res
+        const { token } = data.data
+        if (token) {
+          this.cookie.set('token', token)
+          this.$store.commit('changeToken', token)
+          this.$router.push({ path: '/' })
+        }
+      } catch (e) {
+        console.log(e)
+      }
+    }
+  }
 }
 </script>
