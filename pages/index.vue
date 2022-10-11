@@ -4,7 +4,6 @@
     <main>
       <BaseHero />
       <BaseServices :services="services" />
-      <!-- :services="services"  -->
       <BaseAction />
       <BaseAbout />
     </main>
@@ -15,8 +14,8 @@
 <script>
 export default {
   asyncData ({ store }) {
-    store.dispatch('services/getServices')
-    const services = store.getters['services/services']
+    // store.dispatch('services/getServices')
+    const services = store.getters['services/getServices']
     return { services }
   }
   // computed: {

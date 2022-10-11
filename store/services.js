@@ -1,5 +1,5 @@
 export const state = () => ({
-  servicesData: null,
+  // servicesData: null,
   services: [
     {
       id: 1,
@@ -107,25 +107,22 @@ export const state = () => ({
 })
 
 export const getters = {
-  services: state => state.servicesData ? state.servicesData : []
+  getServices: state => state.services
+  // services: state => state.servicesData ? state.servicesData : []
 }
 
-export const mutations = {
-  setServices (state, value) {
-    console.log('services')
-    console.log(value)
-    state.servicesData = value
-  }
-}
+// export const mutations = {
+//   setServices (state, value) {
+//     state.servicesData = value
+//   }
+// }
 
-export const actions = {
-  getServices (state, commit) {
-    let services = localStorage.getItem('services')
-    if (!services) {
-      services = state.services
-    }
-    // console.log('services')
-    // console.log(services)
-    commit('setServices', services)
-  }
-}
+// export const actions = {
+//   getServices (state, commit) {
+//     let services = localStorage.getItem('services')
+//     if (!services) {
+//       services = state.services
+//     }
+//     commit('setServices', services)
+//   }
+// }
