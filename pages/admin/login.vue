@@ -50,6 +50,9 @@
             </svg>
           </button>
         </label>
+        <div v-if="errorLogin" class="login__error">
+          Неверный логин или пароль
+        </div>
         <button class="login__knob knob knob_alt-2" type="submit">
           Войти
         </button>
@@ -63,9 +66,12 @@ export default {
   middleware: ['checkAuth'],
   data () {
     return {
-      login: 'admin',
-      pass: '1234',
+      login: '',
+      pass: '',
+      corrLogin: 'admin',
+      corrPass: '1234',
       passType: 'password',
+      errorLogin: false,
       showPass: false,
       publicPath: process.env.BASE_URL
     }
@@ -77,25 +83,12 @@ export default {
       } else {
         this.passType = 'password'
       }
-    },
-    async authorization () {
-      try {
-        const res = await this.$axios.post('http://cwmain.crmka.xyz/auth', {
-          login: this.login,
-          password: this.pass,
-          api_key: 'e9daa2e6-510c-47e6-8537-142293e9a9f9'
-        })
-        const { data } = res
-        const { token } = data.data
-        if (token) {
-          this.cookie.set('token', token)
-          this.$store.commit('changeToken', token)
-          this.$router.push({ path: '/' })
-        }
-      } catch (e) {
-        console.log(e)
-      }
     }
+    // authorization () {
+    //   if (this.login === this.corrLogin && this.pass === this.corrPass) {
+
+    //   }
+    // }
   }
 }
 </script>

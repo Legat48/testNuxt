@@ -2,9 +2,16 @@
   {
     "name": "admin",
     "path": "/admin",
-    "component": "D:\\\\testNuxt\\\\pages\\\\admin.vue",
-    "chunkName": "pages/admin",
-    "_name": "_23a00ff8"
+    "component": "D:\\\\testNuxt\\\\pages\\\\admin\\\\index.vue",
+    "chunkName": "pages/admin/index",
+    "_name": "_54400ffe"
+  },
+  {
+    "name": "admin-login",
+    "path": "/admin/login",
+    "component": "D:\\\\testNuxt\\\\pages\\\\admin\\\\login.vue",
+    "chunkName": "pages/admin/login",
+    "_name": "_1de7b315"
   },
   {
     "name": "index",
