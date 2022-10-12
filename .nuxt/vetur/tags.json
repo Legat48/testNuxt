@@ -14,7 +14,13 @@
   "BaseHero": {
     "description": "Auto imported from components/BaseHero.vue"
   },
+  "BaseModal": {
+    "description": "Auto imported from components/BaseModal.vue"
+  },
   "BaseServices": {
     "description": "Auto imported from components/BaseServices.vue"
+  },
+  "ModalBtn": {
+    "description": "Auto imported from components/ModalBtn.vue"
   }
 }

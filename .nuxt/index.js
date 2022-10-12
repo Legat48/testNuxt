@@ -16,6 +16,7 @@ import { createStore } from './store.js'
 import nuxt_plugin_plugin_58c11400 from 'nuxt_plugin_plugin_58c11400' // Source: .\\components\\plugin.js (mode: 'all')
 import nuxt_plugin_image_39fd851e from 'nuxt_plugin_image_39fd851e' // Source: .\\image.js (mode: 'all')
 import nuxt_plugin_cookieuniversalnuxt_5d1981cb from 'nuxt_plugin_cookieuniversalnuxt_5d1981cb' // Source: .\\cookie-universal-nuxt.js (mode: 'all')
+import nuxt_plugin_portalVue_e4516e9a from 'nuxt_plugin_portalVue_e4516e9a' // Source: ..\\plugins\\portalVue.js (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -222,6 +223,10 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_cookieuniversalnuxt_5d1981cb === 'function') {
     await nuxt_plugin_cookieuniversalnuxt_5d1981cb(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_portalVue_e4516e9a === 'function') {
+    await nuxt_plugin_portalVue_e4516e9a(app.context, inject)
   }
 
   // Lock enablePreview in context

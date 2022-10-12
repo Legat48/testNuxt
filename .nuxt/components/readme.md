@@ -11,4 +11,6 @@ You can directly use them in pages and other components without the need to impo
 - `<BaseFooter>` | `<base-footer>` (components/BaseFooter.vue)
 - `<BaseHeader>` | `<base-header>` (components/BaseHeader.vue)
 - `<BaseHero>` | `<base-hero>` (components/BaseHero.vue)
+- `<BaseModal>` | `<base-modal>` (components/BaseModal.vue)
 - `<BaseServices>` | `<base-services>` (components/BaseServices.vue)
+- `<ModalBtn>` | `<modal-btn>` (components/ModalBtn.vue)

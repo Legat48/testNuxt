@@ -8,6 +8,7 @@
       <BaseAbout />
     </main>
     <BaseFooter />
+    <portal-target name="destination" />
   </div>
 </template>
 
