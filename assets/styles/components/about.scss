@@ -1,0 +1,35 @@
+.about {
+  &__box {
+    padding-bottom: 64px;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: calc(852/1716 * 100) calc(876/1716 * 100);
+    grid-template-columns: 49.6% 50.4%;
+  }
+  &__item {
+    min-height: 438px;
+    background-image: url('@/assets/img/about-1.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    &_2{
+      background-image: url('@/assets/img/about-2.png');
+    }
+    &_3{
+      background-image: url('@/assets/img/about-3.png');
+    }
+    &_4{
+      background-image: url('@/assets/img/about-4.png');
+    }
+    &_content-right {
+      background-position: left;
+    }
+  }
+  &__title {
+
+  }
+  &__text {
+
+  }
+}

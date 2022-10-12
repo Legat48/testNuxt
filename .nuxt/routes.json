@@ -3,21 +3,18 @@
     "name": "admin",
     "path": "/admin",
     "component": "D:\\\\testNuxt\\\\pages\\\\admin\\\\index.vue",
-    "chunkName": "pages/admin/index",
-    "_name": "_54400ffe"
+    "chunkName": "pages/admin/index"
   },
   {
     "name": "admin-login",
     "path": "/admin/login",
     "component": "D:\\\\testNuxt\\\\pages\\\\admin\\\\login.vue",
-    "chunkName": "pages/admin/login",
-    "_name": "_1de7b315"
+    "chunkName": "pages/admin/login"
   },
   {
     "name": "index",
     "path": "/",
     "component": "D:\\\\testNuxt\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_867eb7f2"
+    "chunkName": "pages/index"
   }
 ]
