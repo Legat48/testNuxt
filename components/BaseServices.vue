@@ -8,7 +8,7 @@
           :key="service.id"
           class="services__item"
         >
-          <button class="services__btn">
+          <ModalBtn class="services__btn">
             <img
               :src="require(`~/assets/svg/${service.img}`)"
               :alt="service.title"
@@ -20,7 +20,14 @@
             <p class="services__text">
               Подробнее об услуге
             </p>
-          </button>
+            <template #modalContent>
+              <ul>
+                <li v-for="item in service.items" :key="item.id">
+                  {{ item.title }} {{ item.price }}
+                </li>
+              </ul>
+            </template>
+          </ModalBtn>
         </li>
       </ul>
     </div>
@@ -28,7 +35,9 @@
 </template>
 
 <script>
+import ModalBtn from '@/components/ModalBtn.vue'
 export default {
+  components: { ModalBtn },
   props: {
     services: {
       type: Array,

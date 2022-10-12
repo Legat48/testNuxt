@@ -3,7 +3,9 @@ export { default as BaseAction } from '../..\\components\\BaseAction.vue'
 export { default as BaseFooter } from '../..\\components\\BaseFooter.vue'
 export { default as BaseHeader } from '../..\\components\\BaseHeader.vue'
 export { default as BaseHero } from '../..\\components\\BaseHero.vue'
+export { default as BaseModal } from '../..\\components\\BaseModal.vue'
 export { default as BaseServices } from '../..\\components\\BaseServices.vue'
+export { default as ModalBtn } from '../..\\components\\ModalBtn.vue'
 
 // nuxt/nuxt.js#8607
 function wrapFunctional(options) {
