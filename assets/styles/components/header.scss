@@ -8,24 +8,17 @@
   background-color: rgba(206, 26, 237, 0.6);
   background: radial-gradient(51.59% 91.71% at 70.65% 50%, rgba(205, 26, 237, 0.882) 0%, rgba(206, 26, 237, 0.6) 100%);
   backdrop-filter: blur(6px);
-  &__wrap {
+  &__box {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 0 108px;
+    padding-left: 108px;
     min-height: 100px;
-    max-width: 1920px;
   }
   &__burger {
     display: none;
   }
   &__logo {
-    width: 231px;
-    height: 32px;
-    background-image: url('@/assets/logo.svg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
+    margin-right: calc(372/1716 * 100%);
   }
   &__nav {
   }
@@ -39,9 +32,9 @@
     height: 100%;
   }
   &__link {
+    font-weight: 600;
+    font-size: 0.67rem;
+    line-height: 0.69rem;
     color: var(--color-text-1);
-  }
-  &__plug {
-    
   }
 }

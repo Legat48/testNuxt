@@ -1,7 +1,7 @@
 <!-- Please remove this file from your project -->
 <template>
   <header class="header">
-    <div class="header__wrap">
+    <div class="header__box container">
       <button
         id="burger"
         class="burger header__burger"
@@ -34,7 +34,6 @@
           </li>
         </ul>
       </nav>
-      <div class="header__plug" aria-hidden="true" />
     </div>
   </header>
 </template>

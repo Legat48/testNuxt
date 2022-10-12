@@ -3,7 +3,7 @@
   <section id="hero" class="hero">
     <div class="hero__box container">
       <h1 class="hero__title">
-        Засияй по новому
+        Засияй <br> по новому
       </h1>
       <button class="hero__btn btn form-btn" data-form="callbackForm">
         Записаться на консультацию

@@ -26,7 +26,6 @@ p, h1, h2, h3, li, ul, a {
   text-decoration: none;
 }
 a:hover {
-  color: initial;
   text-decoration: none;
 }
 
@@ -36,7 +35,17 @@ body {
 
 .container {
   max-width: 1920px;
-  padding: 0 96px 0 108px;
+  padding: 0 96px 0 98px;
+}
+
+.logo {
+  display: block;
+  width: 231px;
+  height: 32px;
+  background-image: url('@/assets/logo.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
 }
 
 

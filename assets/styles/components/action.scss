@@ -1,6 +1,7 @@
 .action {
   &__box {
-
+    padding-top: 132px;
+    padding-bottom: 132px;
   }
   &__card {
     margin: 0 auto;
@@ -17,22 +18,23 @@
     display: flex;
     flex-direction: column;
     margin-left: auto;
-    padding: 151px 93px 151px calc(335/1077 * 100%)  ;
-    width: calc(1077/1468 * 100%);
+    padding: 143px 90px 137px 270px;
+    width: calc(1022/1500 * 100%);
     min-height: 603px;
     color: var(--color-text-1);
-    background: linear-gradient(0deg, rgba(74, 88, 209, 0.2), rgba(74, 88, 209, 0.2)), radial-gradient(39.98% 91.71% at 77.26% 50%, #9747FF 0%, #EE00F3 100%);
-    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+    background: linear-gradient(0deg, rgba(74, 88, 209, 0.2), rgba(74, 88, 209, 0.2)), radial-gradient(39.98% 91.71% at 77.26% 50%, #9747FF 0%, #EE00F3 100%), #D9D9D9;
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
   }
-  &__title {margin-bottom: 8px;
+  &__title {
+    margin-bottom: 20px;
     font-family: 'NeueMachina', sans-serif;
     font-weight: 800;
     font-size: 2rem;
-    line-height: 2.3rem;
+    line-height: 3rem;
   }
   &__text {
     margin-bottom: 46px;
-    font-size: 1rem;
+    font-size: 0.94rem;
     line-height: 1rem;
   }
   &__btn {
@@ -40,7 +42,7 @@
   }
   &__wrap-btn-nav {
     position: absolute;
-    right: 46px;
+    right: 52px;
     bottom: 49px;
     display: flex;
     gap: 30px;
