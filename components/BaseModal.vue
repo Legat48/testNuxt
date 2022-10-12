@@ -133,9 +133,14 @@ export default {
 }
 .teleport-modal__close {
   position: absolute;
-  top: -1.25em;
-  right: -1.25em;
+  top: -1.5em;
+  right: -1.5em;
   padding: 10px;
+  border: none;
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
   line-height: 1;
+  background: #fff;
 }
 </style>

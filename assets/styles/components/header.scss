@@ -13,12 +13,24 @@
     align-items: center;
     padding-left: 108px;
     min-height: 100px;
+    @media (max-width: 1210px) {
+      justify-content: space-between;
+      padding-left: 60px;
+      min-height: 70px;
+    }
+    @media (max-width: 768px) {
+      padding-left: 30px;
+      min-height: 50px;
+    }
   }
   &__burger {
     display: none;
   }
   &__logo {
     margin-right: calc(372/1716 * 100%);
+    @media (max-width: 1210px) {
+      margin-right: 0;
+    }
   }
   &__nav {
   }
@@ -26,10 +38,16 @@
     display: flex;
     gap: 56px;
     height: 100%;
+    @media (max-width: 768px) {
+      gap: 10px;
+    }
   }
   &__item {
-    padding: 0 32px;
+    padding: 32px;
     height: 100%;
+    @media (max-width: 768px) {
+      padding: 5px;
+    }
   }
   &__link {
     font-weight: 600;

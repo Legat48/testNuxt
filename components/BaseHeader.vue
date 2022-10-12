@@ -2,18 +2,6 @@
 <template>
   <header class="header">
     <div class="header__box container">
-      <button
-        id="burger"
-        class="burger header__burger"
-        aria-label="открыть или закрыть меню"
-        :class="{ 'burger--active': nohidden }"
-        @click="hidden()"
-      >
-        <div class="burger__body">
-          <span class="burger__line" />
-        </div>
-      </button>
-
       <a href="#index.html" class="header__logo logo" aria-label="32 карата" />
       <nav class="header__nav">
         <ul class="header__list">

@@ -1,33 +1,38 @@
 <template>
-  <main />
+  <div class="admin">
+    <h1 class="admin__title">
+      Панель администрирования страницы.
+    </h1>
+    <p class="admin__text">
+      Для изменения списка услуг нажмите на карточку
+    </p>
+    <BaseServices :services="services" />
+    <portal-target name="destination" />
+  </div>
 </template>
 
 <script>
+import BaseServices from '~/components/BaseServices.vue'
 export default {
+  components: { BaseServices },
   middleware: ['checkAuth'],
-  data () {
-    return {
-      login: 'admin',
-      pass: '1234',
-      passType: 'password',
-      showPass: false,
-      publicPath: process.env.BASE_URL
-    }
-  },
-  created () {
-    console.log('test3')
-  },
-  methods: {
-    hidingPass () {
-      if (this.passType === 'password') {
-        this.passType = 'text'
-      } else {
-        this.passType = 'password'
-      }
-    }
-  },
-  beforeCreated () {
-    console.log('test2')
+  asyncData ({ store }) {
+    const services = store.getters['services/getServices']
+    return { services }
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.admin {
+  padding-top: 15px;
+  &__title {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  &__text {
+    margin-bottom: 46px;
+    text-align: center;
+  }
+}
+</style>

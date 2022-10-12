@@ -8,8 +8,12 @@
     text-align: center;
     font-weight: 700;
     font-size: 0.67rem;
-    line-height: 0,69rem;
+    line-height: 0.69rem;
     color: var(--color-text-btn);
     background-color: var(--color-bg-btn);
     cursor: pointer;
+    @media (max-width: 1210px) {
+      padding: 15px;
+      min-width: 170px;
+    }
 }

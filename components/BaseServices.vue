@@ -21,11 +21,55 @@
               Подробнее об услуге
             </p>
             <template #modalContent>
-              <ul>
-                <li v-for="item in service.items" :key="item.id">
-                  {{ item.title }} {{ item.price }}
-                </li>
-              </ul>
+              <div class="services__modal">
+                <h3 class="services__title">
+                  {{ service.title }}
+                </h3>
+                <ul class="services__modal-list">
+                  <li
+                    v-for="item in service.items"
+                    :key="item.id"
+                    class="services__modal-item"
+                  >
+                    <div
+                      v-if="pages !== '/admin'"
+                    >
+                      {{ item.title }}
+                    </div>
+                    <div
+                      v-if="pages !== '/admin'"
+                    >
+                      {{ item.price }}
+                    </div>
+                    <input
+                      v-if="pages === '/admin'"
+                      type="text"
+                      :value="item.title"
+                    >
+                    <input
+                      v-if="pages === '/admin'"
+                      type="text"
+                      :value="item.price"
+                    >
+                    <button v-if="pages === '/admin'" @click.prevent="saveService">
+                      Сохранить
+                    </button>
+                    <button v-if="pages === '/admin'" @click.prevent="delService">
+                      Удалить
+                    </button>
+                  </li>
+                  <form
+                    v-if="pages === '/admin'"
+                    @submit.prevent="addService"
+                  >
+                    <input v-model="addTitle" placeholder="Название услуги">
+                    <input v-model="addPrice" placeholder="цена">
+                    <button type="submit">
+                      Добавить
+                    </button>
+                  </form>
+                </ul>
+              </div>
             </template>
           </ModalBtn>
         </li>
@@ -45,6 +89,23 @@ export default {
         return []
       }
     }
+  },
+  computed: {
+    pages () {
+      return this.$route.path
+    }
+  },
+  methods: {
+    addService () {
+      // нужно прописать функционал
+    },
+    delService () {
+      // нужно прописать функционал
+    },
+    saveService () {
+      // нужно прописать функционал
+    }
+
   }
 }
 </script>

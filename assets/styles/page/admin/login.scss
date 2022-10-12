@@ -6,8 +6,8 @@
     min-width: 100vw;
     height: 100%;
     min-height: 100vh;
-    color: var(--color-text);
-    background-color: var(--color-background);
+    color: var(--color-text-1);
+    background-color: rgba(205, 26, 237);
     background-image: url('@/assets/img/hero-bg@x1.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -18,23 +18,15 @@
       align-items: center;
       margin: auto;
       padding: 33px 18px 42px;
-      border: 1px solid var(--color-border-alt-2);
-      border-radius: var(--radius-card-mid);
+      border-radius: 15px;
       width: calc(281/360*100%);
       max-width: 474px;
       min-height: 267px;
       background-color: rgba(43, 42, 49, 0.7);
-      box-shadow: 0px 0px 13px rgba(255, 202, 5, 0.2);
       backdrop-filter: blur(15px);
     }
     &__logo {
       margin-bottom: 25px;
-      width: 185px;
-      height: 38px;
-      background-image: url('@/assets/logo.svg');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
     }
     &__label {
       position: relative;
@@ -43,8 +35,8 @@
       justify-content: space-between;
       margin-bottom: 15px;
       padding-right: 10px;
-      border: 0.5px solid var(--color-border);
-      border-radius: var(--radius-label);
+      border: 1px solid rgba(255, 255, 255, 0.4);;
+      border-radius: 10px;
       width: 100%;
     }
     &__input {
@@ -88,17 +80,16 @@
     }
     &__view {
       path {
-        fill: var(--color-svg);
+        fill: #fff;
       }
       &.active {
         display: block;
       }
     }
-    &__errorMessage {
+    &__error {
       position: absolute;
-      bottom: -30px;
-      left: 0;
-      color: var(--color-error);
+      bottom: 0;
+      color: rgba(255, 0, 0, 0.453);
       font-weight: 600;
       font-size: 14px;
     }

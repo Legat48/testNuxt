@@ -111,18 +111,18 @@ export const getters = {
   // services: state => state.servicesData ? state.servicesData : []
 }
 
-// export const mutations = {
-//   setServices (state, value) {
-//     state.servicesData = value
-//   }
-// }
+export const mutations = {
+  setServices (state, value) {
+    state.servicesData = value
+  }
+}
 
-// export const actions = {
-//   getServices (state, commit) {
-//     let services = localStorage.getItem('services')
-//     if (!services) {
-//       services = state.services
-//     }
-//     commit('setServices', services)
-//   }
-// }
+export const actions = {
+  getServices (state, commit) {
+    let services = localStorage.getItem('services')
+    if (!services) {
+      services = state.services
+    }
+    commit('setServices', services)
+  }
+}

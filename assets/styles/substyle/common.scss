@@ -15,6 +15,14 @@ img,svg {
 html {
   font-size: 24px;
   line-height: 32px;
+  @media (max-width: 1210px) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 html body {
   font-family: 'Manrope', sans-serif ;
@@ -36,6 +44,12 @@ body {
 .container {
   max-width: 1920px;
   padding: 0 96px 0 98px;
+  @media (max-width: 1210px) {
+    padding: 0 60px 0 60px;
+  }
+  @media (max-width: 768px) {
+    padding: 0 30px 0 30px;
+  }
 }
 
 .logo {

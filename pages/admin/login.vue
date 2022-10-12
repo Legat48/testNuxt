@@ -2,7 +2,7 @@
   <main>
     <div class="login">
       <form class="login__form" action="#" @submit.prevent="authorization()">
-        <div class="login__logo" />
+        <div class="login__logo logo" />
         <label class="login__label" for="input-login">
           <input
             id="input-login"
@@ -80,8 +80,10 @@ export default {
     hidingPass () {
       if (this.passType === 'password') {
         this.passType = 'text'
+        this.showPass = true
       } else {
         this.passType = 'password'
+        this.showPass = false
       }
     },
     authorization () {
@@ -90,6 +92,8 @@ export default {
           path: '/'
         })
         this.$router.push({ path: '/admin' })
+      } else {
+        this.errorLogin = true
       }
     }
   }
