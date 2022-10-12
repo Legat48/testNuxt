@@ -14,7 +14,10 @@
           @click="docloseModal"
           @keyup="doOnOutsideClick"
         >
-          X
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L14 14" stroke="#191820" stroke-opacity="0.6" stroke-linecap="round" />
+            <path d="M1 14L14 1" stroke="#191820" stroke-opacity="0.6" stroke-linecap="round" />
+          </svg>
         </button>
         <slot />
       </div>
@@ -37,7 +40,6 @@ export default {
   data () {
     return {
       contentElement: null,
-      uid: null,
       isOpen: false
     }
   },
@@ -57,10 +59,6 @@ export default {
     isSomeOpen () {
       this.doCheckBlackoutState()
     }
-  },
-  mounted () {
-    // eslint-disable-next-line no-underscore-dangle
-    this.uid = this._uid
   },
   methods: {
     doOnOutsideClick (event) {
