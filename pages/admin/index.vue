@@ -15,10 +15,15 @@
 import BaseServices from '~/components/BaseServices.vue'
 export default {
   components: { BaseServices },
-  middleware: ['checkAuth'],
+  middleware: ['checkAuth', 'services'],
   asyncData ({ store }) {
-    const services = store.getters['services/getServices']
-    return { services }
+    const servicesData = store.getters['services/getServices']
+    return { servicesData }
+  },
+  computed: {
+    services () {
+      return this.$store.getters['services/getServices'] || this.servicesData
+    }
   }
 }
 </script>

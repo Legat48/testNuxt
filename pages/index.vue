@@ -15,16 +15,16 @@
 <script>
 import smoothScroll from '@/helpers/smoothScroll'
 export default {
+  middleware: ['services'],
   asyncData ({ store }) {
-    const services = store.getters['services/getServices']
-    return { services }
+    const servicesData = store.getters['services/getServices']
+    return { servicesData }
   },
-  // computed: {
-  //   services () {
-  //     console.log(this.$store.getters['services/getServices'])
-  //     return this.$store.getters['services/getServices']
-  //   }
-  // }
+  computed: {
+    services () {
+      return this.$store.getters['services/getServices'] || this.servicesData
+    }
+  },
   mounted () {
     smoothScroll()
   }

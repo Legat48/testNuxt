@@ -62,9 +62,9 @@ export default {
   },
   methods: {
     doOnOutsideClick (event) {
-      this.contentElement = event.target
-        .closest('.teleport-modal')
-        .querySelector('.teleport-modal__content')
+      this.contentElement = event.target.closest('.teleport-modal')
+      if (!this.contentElement) { return }
+      this.contentElement = this.contentElement.querySelector('.teleport-modal__content')
       if (
         event.target !== this.contentElement &&
         event.target.contains(this.contentElement)

@@ -95,6 +95,9 @@
     width: 100%;
     min-height: 135px;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+    &:hover {
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
+    }
   }
   &__item-title {
     margin-bottom: 20px;
