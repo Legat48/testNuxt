@@ -1,9 +1,11 @@
 # textNuxt
+Тестовое задание с применением Nuxt.
 
-Тестовое задание на Nuxt
+
 Ссылка на макет:
 https://www.figma.com/file/xUF0SI0D7z3YCRNLZwrDWP/Stamotology?node-id=0%3A1
 
+Техническое задание которое я для себя оформил:
 ТЗ:
 Основные ограничения:
 - Проект делаем на Nuxt c SSR;
